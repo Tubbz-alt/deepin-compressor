@@ -20,7 +20,7 @@ BuildRequires: gcc-c++
 BuildRequires: qt5-devel
 
 BuildRequires: pkgconfig(dtkwidget)
-BuildRequires: pkgconfig(deepin-gettext-tools)
+BuildRequires: deepin-gettext-tools
 # BuildRequires:  qt5-qtbase-devel
 BuildRequires:  gsettings-qt-devel
 BuildRequires:  udisks2-qt5-devel
