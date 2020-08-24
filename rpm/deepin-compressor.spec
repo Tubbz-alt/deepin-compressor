@@ -20,29 +20,21 @@ BuildRequires: gcc-c++
 BuildRequires: qt5-devel
 
 BuildRequires: pkgconfig(dtkwidget)
+BuildRequires: pkgconfig(dtkgui)
+BuildRequires: pkgconfig(gsettings-qt)
+BuildRequires: pkgconfig(libsecret-1)
 BuildRequires: deepin-gettext-tools
-# BuildRequires:  qt5-qtbase-devel
-BuildRequires:  gsettings-qt-devel
-BuildRequires:  udisks2-qt5-devel
-# BuildRequires:  qt5-qtx11extras-devel
-# BuildRequires:  qt5-qtmultimedia-devel
-BuildRequires:  kf5-kcodecs
+BuildRequires: pkgconfig(udisks2-qt5)
 BuildRequires:  kf5-kcodecs-devel
 BuildRequires:  libarchive-devel
-BuildRequires:  libarchive
 BuildRequires:  kf5-karchive-devel
 BuildRequires:  libzip-devel
-# BuildRequires:  qt5-linguist
-BuildRequires:  libsecret-devel
 BuildRequires:  poppler-cpp-devel
-BuildRequires:  poppler-cpp
-BuildRequires:  disomaster-devel
-# BuildRequires:  qt5-qtsvg-devel
-BuildRequires:  libminizip-devel
-# BuildRequires:  zlib-devel
+BuildRequires: pkgconfig(disomaster)
+BuildRequires:  minizip-devel
 
-Requires: p7zip-plugins
-Requires: pkgconfig(deepin-shortcut-viewer)
+# Requires: p7zip-plugins
+# Requires: pkgconfig(deepin-shortcut-viewer)
 
 
 
@@ -67,10 +59,12 @@ popd
 %doc README.md
 %license LICENSE
 %{_bindir}/%{name}
+/usr/lib/%{name}/plugins/*.so
 %{_datadir}/icons/hicolor/scalable/apps/%{name}.svg
 %{_datadir}/%{name}/translations/*.qm
-# %{_datadir}/mime/packages/*.xml
+%{_datadir}/mime/packages/*.xml
 %{_datadir}/applications/%{name}.desktop
+%{_datadir}/deepin/dde-file-manager/oem-menuextensions/*.desktop
 
 
 
